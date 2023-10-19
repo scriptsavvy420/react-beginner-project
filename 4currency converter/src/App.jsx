@@ -9,7 +9,6 @@ function App() {
   const [convertedAmount, setConvertedAmount] = useState(0);
   const currencyInfo = useCurrencyInfo(from);
   const options = Object.keys(currencyInfo);
-  // console.log(options);
   const swap = () => {
     setFrom(to);
     setTo(from);
@@ -38,6 +37,7 @@ function App() {
         amountDisable
       />
       <button onClick={convert}>Convert</button>
+      <button onClick={swap}>swap</button>
     </>
   )
 }
